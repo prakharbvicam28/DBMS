@@ -1,0 +1,2 @@
+select d1.employeeid,d1.firstname,d1.lastname from employees as d1 , employees as d2
+where d1.departmentid=d2.departmentid and d1.employeeid != d2.employeeid

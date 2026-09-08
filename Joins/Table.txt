@@ -1,0 +1,31 @@
+-- Main tables
+CREATE TABLE dept (
+    dept_id INT PRIMARY KEY,
+    dname VARCHAR(15)
+);
+
+CREATE TABLE emp (
+    emp_id INT PRIMARY KEY,
+    ename VARCHAR(15),
+    dept_id INT, -- Foreign key matching dept table
+    mgr_id INT   -- For SELF JOIN practice
+);
+
+
+-- Departments (5 rows)
+INSERT INTO dept VALUES 
+(10, 'HR'),
+(20, 'IT'),
+(30, 'Sales'),
+(40, 'Admin'),
+(50, 'Legal'); -- Department with NO employees
+
+-- Employees (7 rows)
+INSERT INTO emp VALUES 
+(1, 'Alex',  10, NULL), -- CEO/Top Manager (no mgr)
+(2, 'Blake', 20, 1),    -- Managed by Alex
+(3, 'Chris', 20, 2),    -- Managed by Blake
+(4, 'David', 30, 2),    -- Managed by Blake
+(5, 'Emma',  30, 1),    -- Managed by Alex
+(6, 'Fred',  NULL, 1),  -- Employee with NO department
+(7, 'Grace', NULL, 3);  -- Employee with NO department
