@@ -1,0 +1,12 @@
+to shift a user  
+    Alter Session Set "_ORACLE_SCRIPT"=TRUE;
+
+to create a user
+    create user prakhar identified by prk15
+
+to grant a user
+    grant connect to prakhar
+
+granting priviliges
+    grant create table to prakhar
+    
