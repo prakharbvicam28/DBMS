@@ -5,8 +5,20 @@ to create a user
     create user prakhar identified by prk15
 
 to grant a user
-    grant connect to prakhar
+    grant connect to prakhar 
 
 granting priviliges
     grant create table to prakhar
-    
+    grant insert on <table_name> to prakhar
+
+Table creation   
+    Student (S_Id, Name, DeptID)\
+    Department (DeptID, DeptName) 
+
+INNER JOIN
+    select s.s_id, s.name, d.deptid from student s
+    innner join department d on s.deptid=d.deptid 
+
+Cros join
+    select s.name,d.deptname from student s cross join department d;
+
